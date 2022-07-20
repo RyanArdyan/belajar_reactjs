@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar React</title>
+    
+</head>
+<body>
+    <div id="wadah"></div>
+
+    <!-- React JS -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel standalone -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- script -->
+    <script type="text/babel">
+        // PENTING 1
+        // const wadah = document.getElementById('wadah');
+        // const p1 = React.createElement('p', {
+        //     children: 'Paragraph1 dari React',
+        // });
+        // const p2 = React.createElement('p', {
+        //     children: 'Paragraph2 dari React'
+        // });
+        // const element = React.createElement(React.Fragment, {
+        //     children: [p1, p2]
+        // });
+
+        // Penting 2
+        // const wadah = document.getElementById('wadah');        
+        // const elements = (
+        //     <ul>
+        //         <li>Apel</li>
+        //         <li>Pisang</li>
+        //         <li>Anggur</li>
+        //     </ul>
+        // );
+
+        // Penting 3
+        // const wadah = document.getElementById('wadah');
+        // const titleClass = "title2";
+        // const elements = <h1 className={ titleClass }>Halo nama saya Rahmat</h1>;
+
+        // Penting 4
+        // const wadah = document.getElementById('wadah');
+        // const elements = <img src="https://images.unsplash.com/photo-1657785940228-08309c4b9a84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80" />
+        // ReactDOM.render(elements, wadah);
+        
+        //Penting 5
+        const wadah = document.getElementById('wadah');
+        function Halo(props) {
+            return <p>Halo anak baru yang bernama <b>{props.nama}</b></p>
+        };
+        const elements = (
+            <>
+                <Halo nama="Ryan" />
+                <Halo nama="Rizal" />
+                <Halo nama="Dedik" />
+            </>
+        );
+        ReactDOM.render(elements, wadah);
+    </script>
+</body>
+</html>
